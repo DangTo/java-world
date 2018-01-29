@@ -1,0 +1,13 @@
+select * from dba_users d where d.username = 'DANG';
+
+CREATE USER dang IDENTIFIED BY oracle99;
+
+alter session set "_ORACLE_SCRIPT"=true;  
+
+GRANT CONNECT TO dang;
+GRANT CREATE ANY TABLE TO dang;
+GRANT UNLIMITED TABLESPACE TO dang;
+grant create sequence to dang;
+
+
+select * from customer;
