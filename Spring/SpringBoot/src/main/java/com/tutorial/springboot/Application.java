@@ -2,6 +2,10 @@ package com.tutorial.springboot;
 
 import com.tutorial.springboot.dao.CustomerRepository;
 import com.tutorial.springboot.entity.Customer;
+
+import org.apache.camel.example.ftp.MyFtpClientRouteBuilder;
+import org.apache.camel.example.ftp.MyFtpServerRouteBuilder;
+import org.apache.camel.main.Main;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -57,8 +61,17 @@ public class Application implements CommandLineRunner {
 		}
 
 		System.out.println("Done!");
+		
+		Main main = new Main();
+		
+		//upload
+        main.addRouteBuilder(new MyFtpClientRouteBuilder());
+        //download
+        main.addRouteBuilder(new MyFtpServerRouteBuilder());
+        
+        main.run();
 
-		exit(0);
+		//exit(0);
 	}
 
 }
