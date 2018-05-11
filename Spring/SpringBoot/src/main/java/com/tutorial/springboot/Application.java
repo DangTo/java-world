@@ -40,7 +40,7 @@ public class Application implements CommandLineRunner {
 		System.out.println("DATASOURCE = " + dataSource);
 
 		System.out.println("\n1.findAll()...");
-		for (Customer customer : customerRepository.findAll()) {
+		/*for (Customer customer : customerRepository.findAll()) {
 			System.out.println(customer);
 		}
 
@@ -69,7 +69,7 @@ public class Application implements CommandLineRunner {
         //download
         main.addRouteBuilder(new MyFtpServerRouteBuilder());
         
-        main.run();
+        main.run();*/
 
 		//exit(0);
 	}

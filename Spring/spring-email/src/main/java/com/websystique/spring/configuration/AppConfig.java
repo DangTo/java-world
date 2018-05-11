@@ -25,19 +25,27 @@ public class AppConfig {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
 
 		// Using gmail.
-		mailSender.setHost("smtp.gmail.com");
-		mailSender.setPort(465);
-		mailSender.setUsername("danghto86@gmail.com");
-		mailSender.setPassword("Dangth123");
+		//mailSender.setHost("smtp.gmail.com");
+		mailSender.setHost("10.224.128.75");
+		//mailSender.setPort(465);
+		mailSender.setPort(25);
+		//mailSender.setUsername("danghto86@gmail.com");
+		//mailSender.setUsername("etcc.hctra@gmail.com");
+		//mailSender.setPassword("Dangth123");
+		//mailSender.setPassword("Password1@");
 
 		Properties javaMailProperties = new Properties();
-		javaMailProperties.put("mail.smtp.starttls.enable", "true");
-		javaMailProperties.put("mail.smtp.auth", "true");
-		javaMailProperties.put("mail.transport.protocol", "smtp");
-		javaMailProperties.put("mail.debug", "true");
-		javaMailProperties.put("mail.smtp.starttls.required", "true");
-		javaMailProperties.put("mail.smtp.ssl.enable", "true");
-		javaMailProperties.put("mail.smtp.user", "danghto86@gmail.com");
+		
+		javaMailProperties.put("mail.smtp.host", "10.224.128.75");
+		javaMailProperties.put("mail.smtp.timeout", "30000");
+		javaMailProperties.put("mail.smtp.connectiontimeout ", "30000");
+//		javaMailProperties.put("mail.smtp.starttls.enable", "true");
+//		javaMailProperties.put("mail.smtp.auth", "false");
+//		javaMailProperties.put("mail.transport.protocol", "smtp");
+//		javaMailProperties.put("mail.debug", "true");
+//		javaMailProperties.put("mail.smtp.starttls.required", "true");
+		//javaMailProperties.put("mail.smtp.ssl.enable", "true");
+		//javaMailProperties.put("mail.smtp.user", "etcc.hctra@gmail.com");
 		
 		//remember to login to gmail account and enable Allow less secure apps: ON
 		//also need to enable POP and IMAP in settings

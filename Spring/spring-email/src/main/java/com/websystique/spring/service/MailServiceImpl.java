@@ -58,8 +58,9 @@ public class MailServiceImpl implements MailService{
             	MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
  
                	helper.setSubject("Your order on Demoapp with Templates");
-               	helper.setFrom("customerserivces@yourshop.com");
-               	helper.setTo(order.getCustomerInfo().getEmail());
+               	//helper.setFrom("srta-maint@etcchosted.com");
+               	//helper.setTo(order.getCustomerInfo().getEmail());
+               	helper.setTo("noreply-srta@devexchange.local");
      
                	Map<String, Object> model = new HashMap<String, Object>();
                 model.put("order", order);
